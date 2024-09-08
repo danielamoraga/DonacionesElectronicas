@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dispositivos Donados</title>
+    <link rel="stylesheet" type="text/css" href="../css/ver.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <a class="navbar-page" href="./index.html">Volver atrás</a>
+        <h1>Dispositivos Donados</h1>
+        <a class="navbar-page" href="./index.html">Inicio</a>
+    </div>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Nombre Dispositivo</th>
+                    <th>Estado</th>
+                    <th>Comuna</th>
+                    <th>Fotos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!--Dispositivo 1-->
+                <tr onclick="location.href='informacion-dispositivo.html?id=1'">
+                    <td>Audífonos</td>
+                    <td>SONY WH-CH10</td>
+                    <td>Funciona a medias</td>
+                    <td>Ñuñoa</td>
+                    <td><img src="../img/disp1.jpg" alt="Audífonos SONY WH-CH10"></td>
+                </tr>
+                <!--Dispositivo 2-->
+                <tr onclick="location.href='informacion-dispositivo.html?id=2'">
+                    <td>Celular</td>
+                    <td>Samsung Galaxy A24</td>
+                    <td>Funciona perfectamente</td>
+                    <td>Providencia</td>
+                    <td><img src="../img/disp2.jpg" alt="Smartphone Samsung Galaxy A24"></td>
+                </tr>
+                <!--Dispositivo 3-->
+                <tr onclick="location.href='informacion-dispositivo.html?id=3'">
+                    <td>Notebook</td>
+                    <td>ASUS VivoBook</td>
+                    <td>Funciona perfectamente</td>
+                    <td>Temuco</td>
+                    <td><img src="../img/disp3.jpg" alt="Notebook ASUS VivoBook"></td>
+                </tr>
+                <!--Dispositivo 4-->
+                <tr onclick="location.href='informacion-dispositivo.html?id=4'">
+                    <td>Tablet</td>
+                    <td>iPad 10gen 2020</td>
+                    <td>Funciona perfectamente</td>
+                    <td>Santiago Centro</td>
+                    <td><img src="../img/disp4.jpg" alt="iPad 10gen 2020"></td>
+                </tr>
+                <!--Dispositivo 5-->
+                <tr onclick="location.href='informacion-dispositivo.html?id=5'">
+                    <td>Otro</td>
+                    <td>Control joystick GXT análogo</td>
+                    <td>No funciona</td>
+                    <td>San Miguel</td>
+                    <td><img src="../img/disp5.jpg" alt="Control joystick GXT análogo"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--Enlace para volver al inicio-->
+    <footer>
+        <a href="./index.html">Volver al inicio</a>
+    </footer>
+</body>
+</html>

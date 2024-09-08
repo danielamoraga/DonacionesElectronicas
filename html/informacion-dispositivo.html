@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información del Dispositivo</title>
+    <link rel="stylesheet" type="text/css" href="../css/info.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <a class="navbar-page" href="./ver-dispositivos.html">Volver atrás</a>
+        <h1>Información del Dispositivo</h1>
+        <a class="navbar-page" href="./index.html">Inicio</a>
+    </div>
+    <!--ventana de éxito-->
+    <div id="success-box" hidden>
+        <h2>Comentario agregado con éxito</h2>
+    </div>
+    <div class="container">
+        <div class="info-section" id="contact-info">
+            <h2>Información de Contacto</h2>
+            <ul class="info-list">
+            </ul>
+        </div>
+        <div class="info-section" id="disp-info">
+            <h2>Información del Dispositivo</h2>
+            <ul class="info-list">
+            </ul>
+            <h2>Fotos del dispositivo:</h2>
+            <img id="disp-img" src="" alt="Imagen del dispositivo" width="640" height="480" onclick="enlargeImage()">
+        </div>
+        <!--Comentarios-->
+        <div class="comments-section" id="comments">
+            <h2>Comentarios</h2>
+            <!--Lista de comentarios-->
+            <div class="comment">
+            </div>
+            <!--Formulario para agregar un comentario-->
+            <form id="comment-form">
+                <label for="comment-name">Nombre:</label><br>
+                <input type="text" id="comment-name" name="comment-name" minlength="3" maxlength="80" required><br>
+                <label for="comment-content">Comentario:</label><br>
+                <textarea id="comment-content" name="comment-content" rows="4" cols="50" minlength="5" required></textarea><br>
+                <button type="button" id="comentario">Agregar comentario</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <a href="./index.html">Volver al inicio</a>
+    </footer>
+    <script src="../js/info-disp.js"></script>
+    <script src="../js/image.js"></script>
+    <script src="../js/comentario.js"></script>
+</body>
+</html>

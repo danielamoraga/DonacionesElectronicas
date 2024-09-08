@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Donación</title>
+    <link rel="stylesheet" type="text/css" href="../css/agregar.css">
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar">
+        <a class="navbar-page" href="./index.html">Volver atrás</a>
+        <h1>Agregar Donación</h1>
+        <a class="navbar-page" href="./index.html">Inicio</a>
+    </div>
+    <!--ventana de confirmación-->
+    <div id="val-box" hidden>
+        <h2 id="val-msg"></h2>
+        <ul id="val-list"></ul>
+    </div>
+    <!--ventana de éxito-->
+    <div id="success-box" hidden>
+        <h2>Hemos recibido la información de su donación. Muchas gracias.</h2>
+        <a href="./index.html" id="back-home">Volver al inicio</a>
+    </div>
+    <div class="main-container">      
+        <!--información de contacto-->
+        <div class="donante">
+            <h1>Información de contacto</h1>
+            <!--formulario donante-->
+            <form id="donante-form" class="formulario">
+                <!--nombre donante-->
+                <label for="name">Nombre</label>
+                <input id="name" name="name" type="text" minlength="3" maxlength="80" required><br>
+                <!--email donante-->
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" maxlength="30" required><br>
+                <!--número de celular donante-->
+                <label for="phone">Número de celular (opcional)</label>
+                <input id="phone" name="phone" type="text" maxlength="15"><br>
+                <!--menú de selección región-->
+                <label for="select-region">Región</label>
+                <select name="select-region" id="select-region" required>
+                    <option value="">Seleccione una región</option>
+                </select><br>
+                <!--menú de selección comuna-->
+                <label for="select-comuna">Comuna</label>
+                <select name="select-comuna" id="select-comuna" required>
+                    <option value="">Seleccione una comuna</option>
+                </select><br>
+            </form>
+        </div>
+        <!--información dispositivo/s-->
+        <div class="dispositivo">
+            <h1>Información del dispositivo</h1>
+            <!--formulario dispositivo/s-->
+            <form id="disp-form" class="formulario">
+                <!--nombre dispositivo-->
+                <label for="disp">Nombre dispositivo</label>
+                <input id="disp" name="disp" type="text" minlength="3" maxlength="80" required><br>
+                <!--descripción - área de texto opcional 4 filas y 50 columnas-->
+                <label for="desc">Descripción (opcional)</label>
+                <textarea id="desc" name="desc" rows="4" cols="50"></textarea>
+                <!--tipo - menú de selección única obligatorio-->
+                <label for="tipo">Tipo</label>
+                <select name="tipo" id="tipo" required>
+                    <!--menú de selección única con 11 opciones-->
+                    <option value="">Seleccione el tipo de dispositivo</option>
+                    <option value="option1">Pantalla</option>
+                    <option value="option2">Notebook</option>
+                    <option value="option3">Tablet</option>
+                    <option value="option4">Celular</option>
+                    <option value="option5">Consola</option>
+                    <option value="option6">Mouse</option>
+                    <option value="option7">Teclado</option>
+                    <option value="option8">Impresora</option>
+                    <option value="option9">Parlante</option>
+                    <option value="option10">Audífonos</option>
+                    <option value="option11">Otro</option>
+                </select><br>
+                <!--años de uso - caja de texto obligatorio-->
+                <label for="annos">Años de uso</label>
+                <input id="annos" name="annos" type="number" min="1" max="99" required><br>
+                <!--estado funcionamiento - menú de selección única obligatorio-->
+                <label for="estado">Estado funcionamiento</label>
+                <select name="estado" id="estado" required>
+                    <!--menú de selección única con 3 opciones-->
+                    <option value="">Seleccione el estado del dispositivo</option>
+                    <option value="option1">Funciona perfecto</option>
+                    <option value="option2">Funciona a medias</option>
+                    <option value="option3">No funciona</option>
+                </select><br>
+                <!--fotos de productos - ingreso archivo obligatorio-->
+                <label for="fotos">Fotos del producto</label>
+                <input type="file" id="fotos" name="fotos" accept="image/*" multiple required><br>
+                <!--botón agregar dispositivo-->
+                <button type="button" id="agregar-disp">Agregar otro dispositivo a esta donación</button>
+            </form>
+            <button type="button" id="publicar-donacion">Publicar esta donación</button>
+        </div>
+    </div>
+    <!--scripts-->
+    <script src="../js/select_region_comuna.js"></script>
+    <script src="../js/agregar.js"></script>
+</body>
+</html>
