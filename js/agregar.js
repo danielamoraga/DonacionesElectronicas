@@ -32,9 +32,8 @@ const validatePhone = (phone) => {
 const validateAnnos = (annos) => {
     if(!annos) return false;
     let lengthValid = annos.length <= 3;
-    let num = parseInt(annos, 10);
-    let isInteger = Number.isInteger(num);
-    let rangeValid = num >= 1 && num <= 99;
+    let isInteger = Number.isInteger(annos);
+    let rangeValid = annos >= 1 && annos <= 99;
     return lengthValid && rangeValid && isInteger;
 }
 
